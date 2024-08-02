@@ -11,12 +11,22 @@ module.exports = {
   settings: { react: { version: '18.2' } },
   plugins: ['react', 'react-hooks', 'react-refresh', 'prettier'],
   rules: {
+    //react
     'react-refresh/only-export-components': 'warn',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     'react/prop-types': 0,
     'react/display-name': 0,
 
+    //mui
+    'no-restricted-imports': [
+      'error',
+      {
+        patterns: ['@mui/*/*/*'],
+      },
+    ],
+
+    //Common
     'no-console': 1,
     'no-lonely-if': 1,
     'no-unused-vars': 1,
@@ -35,12 +45,6 @@ module.exports = {
     'comma-dangle': 1,
     'comma-spacing': 1,
     'arrow-spacing': 1,
-    'prettier/prettier': [
-      'error',
-      {
-        semi: false, // Chỉnh rule này để không dùng dấu chấm phẩy
-        singleQuote: true,
-      },
-    ],
+    'prettier/prettier': ['error'],
   },
 }
