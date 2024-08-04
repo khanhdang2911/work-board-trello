@@ -19,11 +19,8 @@ function ModeSelect() {
 	}
 
 	return (
-		<FormControl
-			sx={{ m: 1, minWidth: 120 }}
-			size='small'
-		>
-			<InputLabel id='demo-select-small-label'>Mode</InputLabel>{' '}
+		<FormControl size='small'>
+			<InputLabel id='demo-select-small-label'>Mode</InputLabel>
 			<Select
 				sx={{ display: 'flex', alignItems: 'center', gap: '8px' }}
 				labelId='demo-select-small-label'
