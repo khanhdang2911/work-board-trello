@@ -16,6 +16,11 @@ import TextField from '@mui/material/TextField'
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone'
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline'
 import Tooltip from '@mui/material/Tooltip'
+import IconButton from '@mui/material/IconButton'
+import SearchIcon from '@mui/icons-material/Search'
+import AddIcon from '@mui/icons-material/Add'
+import More from './Menus/More'
+
 function AppBar() {
 	return (
 		<Box
@@ -30,10 +35,10 @@ function AppBar() {
 			<Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
 				<AppsIcon
 					fontSize='small'
-					sx={{ color: 'primary.main' }}
+					sx={{ color: 'primary.main', cursor: 'pointer' }}
 				/>
 
-				<Box sx={{ display: 'flex', alignItems: 'center', color: 'primary.main' }}>
+				<Box sx={{ display: 'flex', alignItems: 'center', color: 'primary.main', cursor: 'pointer' }}>
 					<SvgIcon
 						fontSize='small'
 						component={TrelloLogo}
@@ -49,32 +54,42 @@ function AppBar() {
 					</Typography>
 				</Box>
 
-				<Workspaces />
-				<Recent />
-				<Starred />
-				<Template />
-				<Button
-					sx={{ width: 65 }}
-					variant='outlined'
-				>
-					Create
-				</Button>
+				<Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 1 }}>
+					<Workspaces />
+					<Recent />
+					<Starred />
+					<Template />
+					<Button
+						sx={{ width: 65 }}
+						variant='outlined'
+					>
+						Create
+					</Button>
+				</Box>
+				{/* Button add responsive */}
+				<More />
+				<IconButton sx={{ width: 32, height: 32, display: { xs: 'flex', md: 'none' }, color: 'primary.main', bgcolor: '#ecf0f1', borderRadius: '7px' }}>
+					<AddIcon />
+				</IconButton>
 			</Box>
 			{/* {phan ben phai} */}
 			<Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
 				<TextField
-					sx={{ width: 200, height: 40 }}
+					sx={{ width: 200, height: 40, display: { xs: 'none' } }}
 					variant='outlined'
 					label='Search'
 					id='outlined-basic'
 					size='small'
 				/>
 				<ModeSelect />
+				<IconButton sx={{ width: 32, height: 32, display: { xs: 'flex', md: 'none' } }}>
+					<SearchIcon sx={{ width: 24, height: 24, color: 'primary.main' }} />
+				</IconButton>
 				<Tooltip title='Notifications'>
 					<NotificationsNoneIcon sx={{ width: 24, height: 24, cursor: 'pointer', color: 'primary.main' }} />
 				</Tooltip>
 				<Tooltip title='Help'>
-					<HelpOutlineIcon sx={{ width: 24, height: 24, cursor: 'pointer', color: 'primary.main' }} />
+					<HelpOutlineIcon sx={{ width: 24, height: 24, cursor: 'pointer', color: 'primary.main', display: { xs: 'none', md: 'block' } }} />
 				</Tooltip>
 				<Profiles />
 			</Box>
