@@ -1,10 +1,10 @@
 /** @format */
 
-import ModeSelect from '../ModeSelect'
+import ModeSelect from '~/components/ModeSelect'
 import Box from '@mui/material/Box'
 import AppsIcon from '@mui/icons-material/Apps'
 import SvgIcon from '@mui/material/SvgIcon'
-import { ReactComponent as TrelloLogo } from '../../assets/trello.svg'
+import { ReactComponent as TrelloLogo } from '~/assets/trello.svg'
 import Typography from '@mui/material/Typography'
 import Workspaces from './Menus/Workspaces'
 import Recent from './Menus/Recent'
