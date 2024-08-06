@@ -22,7 +22,7 @@ function ModeSelect() {
 		<FormControl size='small'>
 			<InputLabel id='demo-select-small-label'>Mode</InputLabel>
 			<Select
-				sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', gap: '8px' }}
+				sx={{ display: { xs: 'none', sm: 'flex' }, alignItems: 'center', gap: '8px' }}
 				labelId='demo-select-small-label'
 				id='demo-select-small'
 				value={mode}

@@ -54,7 +54,7 @@ function AppBar() {
 					</Typography>
 				</Box>
 
-				<Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 1 }}>
+				<Box sx={{ display: { xs: 'none', lg: 'flex' }, gap: 1 }}>
 					<Workspaces />
 					<Recent />
 					<Starred />
@@ -68,14 +68,14 @@ function AppBar() {
 				</Box>
 				{/* Button add responsive */}
 				<More />
-				<IconButton sx={{ width: 32, height: 32, display: { xs: 'flex', md: 'none' }, color: 'primary.main', bgcolor: '#ecf0f1', borderRadius: '7px' }}>
+				<IconButton sx={{ width: 32, height: 32, display: { xs: 'flex', lg: 'none' }, color: 'primary.main', bgcolor: '#ecf0f1', borderRadius: '7px' }}>
 					<AddIcon />
 				</IconButton>
 			</Box>
 			{/* {phan ben phai} */}
 			<Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
 				<TextField
-					sx={{ width: 200, height: 40, display: { xs: 'none' } }}
+					sx={{ width: 200, height: 40, display: { xs: 'none', sm: 'flex' } }}
 					variant='outlined'
 					label='Search'
 					id='outlined-basic'
@@ -89,7 +89,7 @@ function AppBar() {
 					<NotificationsNoneIcon sx={{ width: 24, height: 24, cursor: 'pointer', color: 'primary.main' }} />
 				</Tooltip>
 				<Tooltip title='Help'>
-					<HelpOutlineIcon sx={{ width: 24, height: 24, cursor: 'pointer', color: 'primary.main', display: { xs: 'none', md: 'block' } }} />
+					<HelpOutlineIcon sx={{ width: 24, height: 24, cursor: 'pointer', color: 'primary.main', display: { xs: 'none', sm: 'block' } }} />
 				</Tooltip>
 				<Profiles />
 			</Box>
