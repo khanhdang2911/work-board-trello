@@ -3,8 +3,9 @@
 import * as React from 'react'
 import Button from '@mui/material/Button'
 import Menu from '@mui/material/Menu'
-import MenuItem from '@mui/material/MenuItem'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
+
+import RecentMenu from './RecentMenu'
 function Recent() {
 	const [anchorEl, setAnchorEl] = React.useState(null)
 	const open = Boolean(anchorEl)
@@ -35,10 +36,10 @@ function Recent() {
 				MenuListProps={{
 					'aria-labelledby': 'basic-button-recent',
 				}}
+				slotProps={{ paper: { sx: { width: 304 } } }}
 			>
-				<MenuItem onClick={handleClose}>Profilev ssssssssssssssss</MenuItem>
-				<MenuItem onClick={handleClose}>My account</MenuItem>
-				<MenuItem onClick={handleClose}>Logout</MenuItem>
+				{/* Children */}
+				<RecentMenu />
 			</Menu>
 		</div>
 	)

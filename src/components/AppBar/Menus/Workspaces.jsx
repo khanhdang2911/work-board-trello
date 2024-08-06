@@ -3,8 +3,8 @@
 import * as React from 'react'
 import Button from '@mui/material/Button'
 import Menu from '@mui/material/Menu'
-import MenuItem from '@mui/material/MenuItem'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
+import WorkspaceMenu from './WorkspaceMenu'
 function Workspaces() {
 	const [anchorEl, setAnchorEl] = React.useState(null)
 	const open = Boolean(anchorEl)
@@ -35,10 +35,9 @@ function Workspaces() {
 				MenuListProps={{
 					'aria-labelledby': 'basic-button-workspaces',
 				}}
+				slotProps={{ paper: { sx: { width: 304 } } }}
 			>
-				<MenuItem onClick={handleClose}>Profilev ssssssssssssssss</MenuItem>
-				<MenuItem onClick={handleClose}>My account</MenuItem>
-				<MenuItem onClick={handleClose}>Logout</MenuItem>
+				<WorkspaceMenu />
 			</Menu>
 		</div>
 	)
