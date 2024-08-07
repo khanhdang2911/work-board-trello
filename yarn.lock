@@ -580,6 +580,11 @@
   resolved "https://registry.npmjs.org/@popperjs/core/-/core-2.11.8.tgz"
   integrity sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==
 
+"@remix-run/router@1.19.0":
+  version "1.19.0"
+  resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.19.0.tgz#745dbffbce67f05386d57ca22c51dfd85c979593"
+  integrity sha512-zDICCLKEwbVYTS6TjYaWtHXxkdoUvD/QXvyVZjGCsWz5vyH7aFeONlPffPdW+Y/t6KT0MgXb2Mfjun9YpWN1dA==
+
 "@rollup/pluginutils@^5.0.4":
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/@rollup/pluginutils/-/pluginutils-5.1.0.tgz#7e53eddc8c7f483a4ad0b94afb1f7f5fd3c771e0"
@@ -2344,6 +2349,21 @@ react-is@^18.3.1:
   resolved "https://registry.npmjs.org/react-is/-/react-is-18.3.1.tgz"
   integrity sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==
 
+react-router-dom@^6.26.0:
+  version "6.26.0"
+  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.26.0.tgz#8debe13295c58605c04f93018d659a763245e58c"
+  integrity sha512-RRGUIiDtLrkX3uYcFiCIxKFWMcWQGMojpYZfcstc63A1+sSnVgILGIm9gNUA6na3Fm1QuPGSBQH2EMbAZOnMsQ==
+  dependencies:
+    "@remix-run/router" "1.19.0"
+    react-router "6.26.0"
+
+react-router@6.26.0:
+  version "6.26.0"
+  resolved "https://registry.yarnpkg.com/react-router/-/react-router-6.26.0.tgz#d5af4c46835b202348ef2b7ddacd32a2db539fde"
+  integrity sha512-wVQq0/iFYd3iZ9H2l3N3k4PL8EEHcb0XlU2Na8nEwmiXgIUElEH6gaJDtUQxJ+JFzmIXaQjfdpcGWaM6IoQGxg==
+  dependencies:
+    "@remix-run/router" "1.19.0"
+
 react-transition-group@^4.4.5:
   version "4.4.5"
   resolved "https://registry.npmjs.org/react-transition-group/-/react-transition-group-4.4.5.tgz"
@@ -2653,17 +2673,6 @@ to-fast-properties@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/to-fast-properties/-/to-fast-properties-2.0.0.tgz"
   integrity sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog==
-
-"trello-web@file:.":
-  version "0.0.0"
-  dependencies:
-    "@emotion/react" "^11.13.0"
-    "@emotion/styled" "^11.13.0"
-    "@mui/icons-material" "^5.16.6"
-    "@mui/material" "^5.16.6"
-    react "^18.3.1"
-    react-dom "^18.3.1"
-    trello-web "file:C:/Users/DXT/AppData/Local/Yarn/Cache/v6/npm-trello-web-0.0.0-94e6b672-c26a-4feb-b98b-5c620f2215da-1722747382873/node_modules/trello-web"
 
 tslib@^2.0.3:
   version "2.6.3"

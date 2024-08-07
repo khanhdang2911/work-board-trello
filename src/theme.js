@@ -1,6 +1,5 @@
 /** @format */
 
-import { teal } from '@mui/material/colors'
 import { experimental_extendTheme as extendTheme } from '@mui/material/styles'
 
 // `extendTheme` is a new API
@@ -9,22 +8,22 @@ const theme = extendTheme({
 		appBarHeight: '58px',
 		boardBarHeight: '60px',
 	},
-	colorSchemes: {
-		light: {
-			palette: {
-				primary: {
-					main: teal[200],
-				},
-			},
-		},
-		dark: {
-			palette: {
-				primary: {
-					main: teal[200],
-				},
-			},
-		},
-	},
+	// colorSchemes: {
+	// 	light: {
+	// 		palette: {
+	// 			primary: {
+	// 				main: teal[200],
+	// 			},
+	// 		},
+	// 	},
+	// 	dark: {
+	// 		palette: {
+	// 			primary: {
+	// 				main: teal[200],
+	// 			},
+	// 		},
+	// 	},
+	// },
 	components: {
 		MuiButton: {
 			styleOverrides: {
