@@ -27,19 +27,19 @@ function BoardBar() {
 		<Box
 			sx={{
 				paddingX: 2,
-				backgroundColor: 'white',
+				bgcolor: (theme) => (theme.palette.mode === 'light' ? '#3498db' : '#576574'),
 				height: (theme) => (matches ? theme.trello.boardBarHeight : `calc(${theme.trello.boardBarHeight} + 20px)`),
 				display: () => (matches ? 'flex' : 'block'),
 				justifyContent: 'space-between',
 				alignItems: 'center',
-				borderTop: (theme) => `1px solid ${theme.palette.primary.main}`,
+				borderTop: '1px solid white',
 			}}
 		>
 			{/* Left part */}
 			<Box sx={{ display: 'flex', gap: '4px' }}>
 				<Button
 					variant='text'
-					sx={{ height: '32px', lineHeight: '32px', cursor: 'pointer', fontSize: '18px', fontWeight: '600', padding: '0 10px' }}
+					sx={{ height: '32px', lineHeight: '32px', cursor: 'pointer', fontSize: '18px', fontWeight: '600', padding: '0 10px', color: 'white' }}
 				>
 					Khanh
 				</Button>
@@ -48,26 +48,26 @@ function BoardBar() {
 					title='Click to star or unstar this board'
 				>
 					<IconButton sx={{ width: '32px', height: '32px', borderRadius: '4px' }}>
-						<StarBorderIcon sx={{ width: '16px', height: '16px', ':hover': { width: '20px', height: '20px' }, color: 'primary.main' }} />
+						<StarBorderIcon sx={{ width: '16px', height: '16px', ':hover': { width: '20px', height: '20px' }, color: 'white' }} />
 					</IconButton>
 				</LightTooltip>
 				<Tooltip title='Change visibility'>
 					<IconButton sx={{ width: '32px', height: '32px', borderRadius: '4px' }}>
-						<GroupIcon sx={{ width: '16px', height: '16px', color: 'primary.main' }} />
+						<GroupIcon sx={{ width: '16px', height: '16px', color: 'white' }} />
 					</IconButton>
 				</Tooltip>
 
 				<Tooltip title='Board'>
 					<Button
 						startIcon={<GradingIcon />}
-						sx={{ height: '32px', fontSize: '14px', fontWeight: '500', userSelect: 'none' }}
+						sx={{ height: '32px', fontSize: '14px', fontWeight: '500', userSelect: 'none', color: 'white' }}
 					>
 						Board
 					</Button>
 				</Tooltip>
 				<Tooltip title='Customize views'>
 					<IconButton sx={{ width: '32px', height: '32px', borderRadius: '4px' }}>
-						<ExpandMoreIcon sx={{ width: '24px', height: '24px', color: 'primary.main' }} />
+						<ExpandMoreIcon sx={{ width: '24px', height: '24px', color: 'white' }} />
 					</IconButton>
 				</Tooltip>
 			</Box>
@@ -75,17 +75,17 @@ function BoardBar() {
 			<Box sx={{ display: 'flex', gap: '10px' }}>
 				<Tooltip title='Power-ups'>
 					<IconButton sx={{ width: '32px', height: '32px', borderRadius: '4px' }}>
-						<RocketLaunchOutlinedIcon sx={{ width: '16px', height: '16px', color: 'primary.main' }} />
+						<RocketLaunchOutlinedIcon sx={{ width: '16px', height: '16px', color: 'white' }} />
 					</IconButton>
 				</Tooltip>
 				<Tooltip title='Automation'>
 					<IconButton sx={{ width: '32px', height: '32px', borderRadius: '4px' }}>
-						<BoltIcon sx={{ width: '18px', height: '18px', color: 'primary.main' }} />
+						<BoltIcon sx={{ width: '18px', height: '18px', color: 'white' }} />
 					</IconButton>
 				</Tooltip>
 				<Button
 					startIcon={<FilterListOutlinedIcon />}
-					sx={{ height: '32px', padding: '6px', fontSize: '14px', lineHeight: '20px' }}
+					sx={{ height: '32px', padding: '6px', fontSize: '14px', lineHeight: '20px', color: 'white' }}
 				>
 					Filters
 				</Button>
@@ -110,13 +110,14 @@ function BoardBar() {
 				>
 					<Button
 						onClick={handleOpen}
-						sx={{ height: '32px', padding: '6px' }}
+						variant='outlined'
+						sx={{ height: '32px', padding: '4px', margin: '0 3px', color: 'white', borderColor: 'white', '&:hover': { borderColor: 'white' } }}
 						startIcon={<PersonAddOutlinedIcon />}
 					>
 						Share
 					</Button>
 				</LightTooltip>
-				<IconButton sx={{ width: '32px', height: '32px', borderRadius: '4px' }}>
+				<IconButton sx={{ width: '32px', height: '32px', borderRadius: '4px', color: 'white' }}>
 					<MoreHorizOutlinedIcon />
 				</IconButton>
 			</Box>

@@ -57,7 +57,7 @@ function ModalShare() {
 					</IconButton>
 					<Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'start' }}>
 						<Typography sx={{ fontSize: '14px', fontWeight: '400' }}>Share this board with a link</Typography>
-						<Button sx={{ color: '#0c66e4', fontSize: '12px', padding: 0, minWidth: 0, lineHeight: '1', ':hover': { bgcolor: 'white', textDecoration: 'underline' } }}>
+						<Button sx={{ color: '#0c66e4', fontSize: '12px', padding: 0, minWidth: 0, lineHeight: '1', ':hover': { bgcolor: 'transparent', textDecoration: 'underline' } }}>
 							Create link
 						</Button>
 					</Box>
@@ -76,9 +76,9 @@ function ModalShare() {
 						onClick={() => {
 							setActiveInModal(true)
 						}}
-						sx={{ padding: 0, minWidth: 0, borderRadius: '0', ':hover': { bgcolor: 'white' } }}
+						sx={{ padding: 0, minWidth: 0, borderRadius: '0', ':hover': { bgcolor: 'white' }, '&:hover': { bgcolor: 'transparent' } }}
 					>
-						<Typography sx={{  borderRadius: '0', fontWeight: '500', fontSize: '14px' }}>Board members</Typography>
+						<Typography sx={{ borderRadius: '0', fontWeight: '500', fontSize: '14px' }}>Board members</Typography>
 						<Typography
 							sx={{
 								display: 'flex',
@@ -103,9 +103,9 @@ function ModalShare() {
 						onClick={() => {
 							setActiveInModal(false)
 						}}
-						sx={{ padding: 0, borderRadius: '0', ml: '12px', ':hover': { bgcolor: 'white' } }}
+						sx={{ padding: 0, borderRadius: '0', ml: '12px', ':hover': { bgcolor: 'white' }, '&:hover': { bgcolor: 'transparent' } }}
 					>
-						<Typography sx={{  fontWeight: '500', fontSize: '14px' }}>Join request</Typography>
+						<Typography sx={{ fontWeight: '500', fontSize: '14px' }}>Join request</Typography>
 					</Button>
 				</Box>
 				<Divider />

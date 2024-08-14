@@ -34,46 +34,32 @@ const theme = extendTheme({
 		},
 		MuiOutlinedInput: {
 			styleOverrides: {
-				root: ({ theme }) => {
-					return {
-						color: theme.palette.primary.main,
-						fontSize: '0.875rem',
-						'.MuiOutlinedInput-notchedOutline': {
-							borderColor: theme.palette.primary.main,
-						},
-						'&:hover': {
-							'.MuiOutlinedInput-notchedOutline': {
-								borderColor: theme.palette.primary.main,
-							},
-						},
-						'& fieldset': {
-							borderWidth: '1px !important',
-						},
-					}
+				root: {
+					fontSize: '0.875rem',
+					'& fieldset': {
+						borderWidth: '1px !important',
+					},
 				},
 			},
 		},
 		MuiInputLabel: {
 			styleOverrides: {
-				root: ({ theme }) => {
-					return {
-						color: theme.palette.primary.main,
-						fontSize: '0.875rem',
-					}
+				root: {
+					fontSize: '0.875rem',
 				},
 			},
 		},
-		MuiSelect: {
-			styleOverrides: {
-				root: ({ theme }) => {
-					return {
-						'.MuiSvgIcon-root': {
-							color: theme.palette.primary.main,
-						},
-					}
-				},
-			},
-		},
+		// MuiSelect: {
+		// 	styleOverrides: {
+		// 		root: ({ theme }) => {
+		// 			return {
+		// 				'.MuiSvgIcon-root': {
+		// 					color: theme.palette.primary.main,
+		// 				},
+		// 			}
+		// 		},
+		// 	},
+		// },
 	},
 	breakpoints: {
 		values: {

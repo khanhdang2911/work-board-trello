@@ -20,9 +20,36 @@ function ModeSelect() {
 
 	return (
 		<FormControl size='small'>
-			<InputLabel id='demo-select-small-label'>Mode</InputLabel>
+			<InputLabel
+				id='demo-select-small-label'
+				sx={{
+					color: 'white',
+					'&.Mui-focused': {
+						color: 'white',
+					},
+				}}
+			>
+				Mode
+			</InputLabel>
 			<Select
-				sx={{ display: { xs: 'none', sm: 'flex' }, alignItems: 'center', gap: '8px' }}
+				sx={{
+					display: { xs: 'none', sm: 'flex' },
+					alignItems: 'center',
+					gap: '8px',
+					color: 'white',
+					'.MuiOutlinedInput-notchedOutline': {
+						borderColor: 'white',
+					},
+					'&:hover .MuiOutlinedInput-notchedOutline': {
+						borderColor: 'white',
+					},
+					'&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+						borderColor: 'white',
+					},
+					'.MuiSvgIcon-root': {
+						color: 'white',
+					},
+				}}
 				labelId='demo-select-small-label'
 				id='demo-select-small'
 				value={mode}
