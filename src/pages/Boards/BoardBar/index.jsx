@@ -1,6 +1,6 @@
 /** @format */
 import { useState, createContext } from 'react'
-import { Avatar, Badge, Button, IconButton, Tooltip, useMediaQuery } from '@mui/material'
+import { Avatar, Badge, Button, IconButton, Tooltip } from '@mui/material'
 import Box from '@mui/material/Box'
 import StarBorderIcon from '@mui/icons-material/StarBorder'
 import GroupIcon from '@mui/icons-material/Group'
@@ -15,7 +15,6 @@ import LightTooltip from '~/components/LightTooltip'
 import ModalShare from './ModalShare'
 export const ModalContext = createContext()
 function BoardBar() {
-	const matches = useMediaQuery('(min-width:600px)')
 	const [open, setOpen] = useState(false)
 	const handleClose = () => {
 		setOpen(false)
@@ -28,11 +27,13 @@ function BoardBar() {
 			sx={{
 				paddingX: 2,
 				bgcolor: (theme) => (theme.palette.mode === 'light' ? '#3498db' : '#576574'),
-				height: (theme) => (matches ? theme.trello.boardBarHeight : `calc(${theme.trello.boardBarHeight} + 20px)`),
-				display: () => (matches ? 'flex' : 'block'),
+				height: (theme) => theme.trello.boardBarHeight,
+				display: 'flex',
 				justifyContent: 'space-between',
 				alignItems: 'center',
 				borderTop: '1px solid white',
+				overflowX: 'unset',
+				overflowY: 'hidden',
 			}}
 		>
 			{/* Left part */}

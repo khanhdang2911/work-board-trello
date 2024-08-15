@@ -71,7 +71,7 @@ function AppBar() {
 				</Box>
 				{/* Button add responsive */}
 				<More />
-				<IconButton sx={{ width: 32, height: 32, display: { xs: 'flex', lg: 'none' }, color: 'white', bgcolor: '#ecf0f1', borderRadius: '7px' }}>
+				<IconButton sx={{ width: 32, height: 32, display: { xs: 'flex', lg: 'none' }, color: 'white', borderRadius: '7px' }}>
 					<AddIcon />
 				</IconButton>
 			</Box>
