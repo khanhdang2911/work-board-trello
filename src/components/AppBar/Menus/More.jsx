@@ -64,7 +64,7 @@ function More() {
 				aria-haspopup='true'
 				aria-expanded={open ? 'true' : undefined}
 				onClick={handleClick}
-				sx={{ bgcolor: '#80cbc40a', display: { xs: 'flex', lg: 'none' } }}
+				sx={{ display: { xs: 'flex', lg: 'none' }, color: 'white' }}
 			>
 				More
 				<ExpandMoreIcon />
