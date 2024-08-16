@@ -5,15 +5,19 @@ import Column from './Column/Column'
 import AddIcon from '@mui/icons-material/Add'
 import Button from '@mui/material/Button'
 
-function ListColumns() {
+function ListColumns({ columns }) {
 	return (
 		<Box sx={{ display: 'flex', height: '100%', maxWidth: '100%', overflowX: 'auto' }}>
-			<Column />
-			<Column />
-			<Column />
+			{columns.map((column) => {
+				return (
+					<Column
+						key={column._id}
+						column={column}
+					/>
+				)
+			})}
 			<Box
 				sx={{
-					// width: '272px',
 					minWidth: '272px',
 					maxWidth: '272px',
 					height: 'fit-content',

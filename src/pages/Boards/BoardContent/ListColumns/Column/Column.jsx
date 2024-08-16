@@ -10,7 +10,8 @@ import { Cloud, ContentCopy, ContentCut, ContentPaste } from '@mui/icons-materia
 import AddIcon from '@mui/icons-material/Add'
 import DragHandleIcon from '@mui/icons-material/DragHandle'
 import ListCards from './ListCards/ListCards'
-function Column() {
+import mapOrder from '~/utils/mapOrder'
+function Column({ column }) {
 	const [anchorEl, setAnchorEl] = useState(null)
 	const open = Boolean(anchorEl)
 	const handleClick = (event) => {
@@ -19,10 +20,14 @@ function Column() {
 	const handleClose = () => {
 		setAnchorEl(null)
 	}
+
+	const cardOrdered = mapOrder(column?.cards, column?.cardOrderIds, '_id')
+
 	return (
 		<Box
 			sx={{
-				width: '272px',
+				minWidth: '272px',
+				maxWidth: '272px',
 				height: 'fit-content',
 				mt: 2,
 				mr: 1,
@@ -36,7 +41,7 @@ function Column() {
 					variant='h6'
 					sx={{ fontSize: '14px', fontWeight: 'bold' }}
 				>
-					Home work
+					{column?.title}
 				</Typography>
 				<div>
 					<ExpandMoreIcon
@@ -87,8 +92,8 @@ function Column() {
 					</Menu>
 				</div>
 			</Box>
-      {/* List card */}
-      <ListCards/>
+			{/* List card */}
+			<ListCards cards={cardOrdered} />
 			<Box sx={{ height: (theme) => theme.trello.footerBoardContentHeight, display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '4px 5px 0 9px' }}>
 				<Button startIcon={<AddIcon />}>Add a card</Button>
 				<IconButton>
