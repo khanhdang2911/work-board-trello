@@ -7,8 +7,8 @@ import { Button, Divider, IconButton, TextField, Typography } from '@mui/materia
 import Box from '@mui/material/Box'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 
-import { ModalContext } from '..'
-import ModalStyle from '~/components/ModalStyle'
+import { ModalContext } from '../BoardBar'
+import ModalStyle from '~/components/ModalStyle/ModalStyle'
 function ModalShare() {
 	const [activeInModal, setActiveInModal] = useState(true)
 	const modalContextValue = useContext(ModalContext)

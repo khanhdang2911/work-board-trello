@@ -11,8 +11,8 @@ import RocketLaunchOutlinedIcon from '@mui/icons-material/RocketLaunchOutlined'
 import FilterListOutlinedIcon from '@mui/icons-material/FilterListOutlined'
 import PersonAddOutlinedIcon from '@mui/icons-material/PersonAddOutlined'
 import MoreHorizOutlinedIcon from '@mui/icons-material/MoreHorizOutlined'
-import LightTooltip from '~/components/LightTooltip'
-import ModalShare from './ModalShare'
+import LightTooltip from '~/components/LightTooltip/LightTooltip'
+import ModalShare from './ModalShare/ModalShare'
 export const ModalContext = createContext()
 function BoardBar() {
 	const [open, setOpen] = useState(false)
