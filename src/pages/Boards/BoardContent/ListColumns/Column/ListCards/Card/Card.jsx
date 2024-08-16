@@ -10,47 +10,50 @@ import GroupIcon from '@mui/icons-material/Group'
 import CommentIcon from '@mui/icons-material/Comment'
 import AttachmentIcon from '@mui/icons-material/Attachment'
 
-// eslint-disable-next-line react/prop-types
-function Card({ temporaryHidden }) {
-	if (temporaryHidden != null) {
-		return (
-			<MuiCard sx={{ boxShadow: '0px 1px 1px 1px rgba(0,0,0,0.2)', mt: 1 }}>
-				<CardContent sx={{ p: 1.5, cursor: 'pointer', '&:last-child': { p: 1.5 } }}>
-					<Typography sx={{ fontSize: '1rem' }}>Kickoff meeting</Typography>
-				</CardContent>
-			</MuiCard>
-		)
-	}
+function Card({ card }) {
+	const memberLength = card?.memberIds.length
+	const commentLength = card?.comments.length
+	const attachmentLength = card?.attachments.length
 	return (
 		<MuiCard sx={{ boxShadow: '0px 1px 1px 1px rgba(0,0,0,0.2)', mt: 1 }}>
-			<CardMedia
-				sx={{ height: 140 }}
-				image='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF-2MUiIoA7QjqpPUFROFgtRqGlfkMOxQteQ&s'
-				title='green iguana'
-			/>
+			{card?.cover && (
+				<CardMedia
+					sx={{ height: 140 }}
+					image={card?.cover}
+					title='green iguana'
+				/>
+			)}
 			<CardContent sx={{ p: 1.5, cursor: 'pointer', '&:last-child': { p: 1.5 } }}>
-				<Typography sx={{ fontSize: '1rem' }}>Kickoff meeting</Typography>
+				<Typography sx={{ fontSize: '1rem' }}>{card?.title}</Typography>
 			</CardContent>
-			<CardActions>
-				<Button
-					size='small'
-					startIcon={<GroupIcon />}
-				>
-					20
-				</Button>
-				<Button
-					size='small'
-					startIcon={<CommentIcon />}
-				>
-					15
-				</Button>
-				<Button
-					size='small'
-					startIcon={<AttachmentIcon />}
-				>
-					20
-				</Button>
-			</CardActions>
+			{(!!memberLength || !!commentLength || !!attachmentLength) && (
+				<CardActions>
+					{!!memberLength && (
+						<Button
+							size='small'
+							startIcon={<GroupIcon />}
+						>
+							{memberLength}
+						</Button>
+					)}
+					{!!commentLength && (
+						<Button
+							size='small'
+							startIcon={<CommentIcon />}
+						>
+							{commentLength}
+						</Button>
+					)}
+					{!!attachmentLength && (
+						<Button
+							size='small'
+							startIcon={<AttachmentIcon />}
+						>
+							{attachmentLength}
+						</Button>
+					)}
+				</CardActions>
+			)}
 		</MuiCard>
 	)
 }

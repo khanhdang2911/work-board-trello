@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /** @format */
 import { useState, createContext } from 'react'
 import { Avatar, Badge, Button, IconButton, Tooltip } from '@mui/material'
@@ -14,7 +15,7 @@ import MoreHorizOutlinedIcon from '@mui/icons-material/MoreHorizOutlined'
 import LightTooltip from '~/components/LightTooltip/LightTooltip'
 import ModalShare from './ModalShare/ModalShare'
 export const ModalContext = createContext()
-function BoardBar() {
+function BoardBar({ board }) {
 	const [open, setOpen] = useState(false)
 	const handleClose = () => {
 		setOpen(false)
@@ -42,7 +43,7 @@ function BoardBar() {
 					variant='text'
 					sx={{ height: '32px', lineHeight: '32px', cursor: 'pointer', fontSize: '18px', fontWeight: '600', padding: '0 10px', color: 'white' }}
 				>
-					Khanh
+					{board?.title}
 				</Button>
 				<LightTooltip
 					placement='bottom-end'
